@@ -1,0 +1,3 @@
+function typing(){
+    return "hello";
+}
