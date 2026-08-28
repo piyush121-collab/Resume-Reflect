@@ -4,26 +4,47 @@
   "description": "Multi-agent AI interview panel simulator (4 independent personas, debate, non-averaging final decision)",
   "type": "module",
   "scripts": {
-    "start": "tsx src/main.ts",
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server.js",
+    "server": "node server.js",
+    "cli": "tsx src/main.ts",
     "candidate:a": "tsx src/main.ts --candidate A",
     "candidate:b": "tsx src/main.ts --candidate B",
     "candidate:both": "tsx src/main.ts --candidate both",
     "compare": "tsx src/compare.ts",
     "models:check": "tsx src/healthCheck.ts",
     "test": "tsx tests/selfCheck.ts",
-    "build": "tsc",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "commander": "^12.1.0",
+    "cors": "^2.8.6",
     "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "lucide-react": "^1.35.0",
+    "multer": "^2.2.0",
     "pdf-parse": "^1.1.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.2.0",
     "@types/node": "^20.14.0",
     "@types/pdf-parse": "^1.1.4",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3",
     "tsx": "^4.16.2",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vite": "^8.2.2"
   }
 }
