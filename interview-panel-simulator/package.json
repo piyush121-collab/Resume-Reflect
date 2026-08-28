@@ -1,0 +1,29 @@
+{
+  "name": "interview-panel-simulator",
+  "version": "1.0.0",
+  "description": "Multi-agent AI interview panel simulator (4 independent personas, debate, non-averaging final decision)",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "candidate:a": "tsx src/main.ts --candidate A",
+    "candidate:b": "tsx src/main.ts --candidate B",
+    "candidate:both": "tsx src/main.ts --candidate both",
+    "compare": "tsx src/compare.ts",
+    "models:check": "tsx src/healthCheck.ts",
+    "test": "tsx tests/selfCheck.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "pdf-parse": "^1.1.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/pdf-parse": "^1.1.4",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
+}
